@@ -20,9 +20,8 @@ import javafx.util.Duration;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
-import static com.almasb.fxglgames.flappy.EntityType.MOUNTAIN;
-import static com.almasb.fxglgames.flappy.EntityType.PLAYER;
-import static com.almasb.fxglgames.flappy.EntityType.BIRD;
+
+import static com.almasb.fxglgames.flappy.EntityType.*;
 
 /**
  * @author Almas Baimagambetov (almaslvl@gmail.com)

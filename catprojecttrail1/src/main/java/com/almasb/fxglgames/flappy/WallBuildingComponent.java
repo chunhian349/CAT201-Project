@@ -9,8 +9,11 @@ import com.almasb.fxgl.texture.Texture;
 
 import java.util.Random;
 
-import static com.almasb.fxgl.dsl.FXGL.entityBuilder;
-import static com.almasb.fxgl.dsl.FXGL.texture;
+import static com.almasb.fxgl.dsl.FXGL.*;
+
+/**
+ * CAT201 PROJECT
+ */
 
 public class WallBuildingComponent extends Component {
 
@@ -49,7 +52,9 @@ public class WallBuildingComponent extends Component {
 
         //}
         lastBird += 10 * 500;
+
         lastMount += 10 * 500;
+
     }
     private void mountainSpawn() {
         Texture wallTxt = texture("blue_mountain.png");
@@ -66,9 +71,9 @@ public class WallBuildingComponent extends Component {
                 .buildAndAttach();
         //}
         lastBird += 10 * 500;
+
         lastMount += 10 * 500;
     }
-
 
 }
 
