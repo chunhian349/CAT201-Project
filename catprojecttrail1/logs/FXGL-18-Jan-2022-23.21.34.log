@@ -1,0 +1,883 @@
+23:20:23.447 [main                     ] DEBUG Logger               - Configured Logger
+23:20:23.450 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Speedy Plane
+Version: 1.0
+Width: 1980
+Height: 1080
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.app.scene.SceneFactory
+
+23:20:23.922 [JavaFX Application Thread] DEBUG FXGLApplication      - Initializing FXGL
+23:20:23.924 [JavaFX Application Thread] INFO  Engine               - FXGL-11.17 (16.07.2021 15.46) on WINDOWS (J:17.0.1 FX:16)
+23:20:23.924 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+23:20:23.925 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Windows 10 version 10.0
+23:20:23.925 [JavaFX Application Thread] DEBUG Engine               - Architecture: amd64
+23:20:23.925 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+23:20:23.925 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+23:20:24.056 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Creating a JavaFX scene
+23:20:24.056 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Target size > screen size
+23:20:24.105 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Target settings size: 1980.0 x 1080.0
+23:20:24.105 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled scene size:    1485.0 x 823.0
+23:20:24.105 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (0.75, 0.7620370370370371)
+23:20:24.106 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Set initial scene to FXGLStartupScene
+23:20:24.114 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Opening main window
+23:20:24.220 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Window border size: (15.0, 37.79998779296875)
+23:20:24.220 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled size: 1485.0 x 823.0
+23:20:24.220 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (0.75, 0.7620370370370371)
+23:20:24.220 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scene size: 1485.0 x 823.0
+23:20:24.220 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Stage size: 1500.0 x 860.7999877929688
+23:20:24.229 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+23:20:24.293 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - User app class for loading assets: class com.almasb.fxglgames.flappy.FlappyBirdApp
+23:20:24.293 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Applying CSS: fxgl_dark.css
+23:20:24.294 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/css/fxgl_dark.css
+23:20:24.339 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Initializing application scenes
+23:20:24.398 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+23:20:24.468 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=1080, physics.ppm=50.0
+23:20:24.469 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Using strategy: BRUTE_FORCE
+23:20:24.472 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 1980x1080
+23:20:24.495 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyMainMenu()
+23:20:24.519 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+23:20:24.530 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/particles/smoke.png
+23:20:24.639 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/particles/trace_horizontal.png
+23:20:24.667 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyGameMenu()
+23:20:24.669 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+23:20:24.685 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Application scenes initialized
+23:20:24.700 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+23:20:24.706 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: C:\Users\chunh\IdeaProjects\catprojecttrail1\system\fxgl.bundle
+23:20:24.713 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+23:20:24.713 [FXGL Background Thread 1 ] DEBUG UpdaterService       - Checking for updates
+23:20:24.718 [FXGL Background Thread 4 ] DEBUG FXGLApplication      - Loading fonts
+23:20:24.718 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/VarelaRound-Regular.ttf
+23:20:24.719 [FXGL Background Thread 1 ] DEBUG FXGLApplication      - Loading default localization
+23:20:24.719 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/languages/english.lang
+23:20:24.746 [FXGL Background Thread 1 ] INFO  FXGLApplication      - FXGL initialization took: 0.517 sec
+23:20:24.757 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Jump - Space
+23:20:24.758 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/chunh/IdeaProjects/catprojecttrail1/target/classes/assets/music/bgm.mp3
+23:20:24.804 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/Abel-Regular.ttf
+23:20:24.811 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/lucida_console.ttf
+23:20:24.818 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/Courier-Prime.ttf
+23:20:24.918 [JavaFX Application Thread] DEBUG AudioPlayer          - Playing music com.almasb.fxgl.audio.Music@765ee24f
+23:20:24.919 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/fxgl_icon.png
+23:20:24.938 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:/C:/Users/chunh/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/fxgl_default_cursor.png
+23:20:24.942 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - CTRL+8
+23:20:24.951 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+23:20:24.952 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+23:20:24.955 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Toggle Debug Camera - CTRL+C
+23:20:24.962 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+23:20:24.962 [JavaFX Application Thread] DEBUG LoopRunner           - Initializing JavaFX AnimationTimerLoop
+23:20:24.966 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:24.972 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLStartupScene and adding to FXGLMainMenuDummyScene
+23:20:24.972 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLStartupScene -> FXGLMainMenuDummyScene
+23:20:24.972 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: FXGLDefaultMenu
+23:20:24.985 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:25.000 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLDefaultMenu
+23:20:25.001 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> FXGLDefaultMenu
+23:20:25.014 [JavaFX Application Thread] DEBUG FXGLApplication      - Registering font factories with UI factory
+23:20:25.188 [FXGL Background Thread 2 ] INFO  UpdaterService       - Your current version:  11.17
+23:20:25.188 [FXGL Background Thread 2 ] INFO  UpdaterService       - Latest stable version: 17
+23:20:25.735 [JavaFX Application Thread] DEBUG Menu                 - fireNewGame()
+23:20:25.735 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:25.742 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: FXGLDefaultMenu
+23:20:25.742 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:25.744 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLDefaultMenu and adding to FXGLMainMenuDummyScene
+23:20:25.744 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene <- FXGLDefaultMenu
+23:20:25.745 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:25.754 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLLoadingScene
+23:20:25.755 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> FXGLLoadingScene
+23:20:25.755 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:25.755 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:25.755 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:25.755 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:25.759 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:25.777 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/chunh/IdeaProjects/catprojecttrail1/target/classes/assets/textures/plane.png
+23:20:25.823 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.065 sec
+23:20:25.827 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:25.838 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:25.838 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:25.843 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/chunh/IdeaProjects/catprojecttrail1/target/classes/assets/textures/cloud.png
+23:20:25.849 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/chunh/IdeaProjects/catprojecttrail1/target/classes/assets/textures/blue_mountain.png
+23:20:25.883 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/chunh/IdeaProjects/catprojecttrail1/target/classes/assets/textures/bird.png
+23:20:26.243 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:26.330 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:26.725 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:26.793 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:27.378 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:27.379 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:27.379 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:27.380 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - Logging environment variables
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - achievements: []
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeight: 823.0
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeightProperty: ReadOnlyDoubleProperty [value: 823.0]
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidth: 1485.0
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidthProperty: ReadOnlyDoubleProperty [value: 1485.0]
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - appIcon: fxgl_icon.png
+23:20:27.717 [FXGL Background Thread 3 ] DEBUG Engine               - applicationMode: DEVELOPER
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - cSSList: [fxgl_dark.css]
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - collisionDetectionStrategy: BRUTE_FORCE
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - configClass: Optional.empty
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - credits: []
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - defaultCursor: CursorInfo(imageName=fxgl_default_cursor.png, hotspotX=7.0, hotspotY=6.0)
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - devEnableDebugCameraProperty: BooleanProperty [value: false]
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - enabledMenuItems: []
+23:20:27.718 [FXGL Background Thread 3 ] DEBUG Engine               - engineServices: [class com.almasb.fxgl.app.services.FXGLAssetLoaderService, class com.almasb.fxgl.app.FXGLApplication$GameApplicationService, class com.almasb.fxgl.app.services.FXGLDialogService, class com.almasb.fxgl.app.services.IOTaskExecutorService, class com.almasb.fxgl.io.FileSystemService, class com.almasb.fxgl.localization.LocalizationService, class com.almasb.fxgl.app.services.SystemBundleService, class com.almasb.fxgl.profile.SaveLoadService, class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider, class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider, class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementService, class com.almasb.fxgl.cutscene.CutsceneService, class com.almasb.fxgl.minigames.MiniGameService, class com.almasb.fxgl.net.NetService, class com.almasb.fxgl.app.services.UpdaterService, class com.almasb.fxgl.dev.DevService]
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - fontGame: Abel-Regular.ttf
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - fontMono: lucida_console.ttf
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - fontText: Courier-Prime.ttf
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - fontUI: VarelaRound-Regular.ttf
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficulty: MEDIUM
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficultyProperty: ObjectProperty [value: MEDIUM]
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolume: 0.5
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.5]
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolume: 0.5
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.5]
+23:20:27.719 [FXGL Background Thread 3 ] DEBUG Engine               - height: 1080
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - is3D: false
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isAndroid: false
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isBrowser: false
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isClickFeedbackEnabled: false
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isCloseConfirmation: false
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isDesktop: true
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isDeveloperMenuEnabled: false
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isEntityPreloadEnabled: true
+23:20:27.720 [FXGL Background Thread 3 ] DEBUG Engine               - isExperimentalTiledLargeMap: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isFileSystemWriteAllowed: true
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenAllowed: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenFromStart: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isGameMenuEnabled: true
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isIOS: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isIntroEnabled: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isLinux: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isMac: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isMainMenuEnabled: true
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isManualResizeEnabled: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isMobile: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isNative: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isPauseMusicWhenMinimized: true
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isPreserveResizeRatio: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isProfilingEnabled: false
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isScaleAffectedOnResize: true
+23:20:27.721 [FXGL Background Thread 3 ] DEBUG Engine               - isSingleStep: false
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - isUserProfileEnabled: false
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - isWindows: true
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - menuKey: ESCAPE
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - mouseSensitivity: 0.2
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - pixelsPerMeter: 50.0
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - platform: WINDOWS
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - prefHeightProperty: ReadOnlyDoubleProperty [value: 1080.0]
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - prefWidthProperty: ReadOnlyDoubleProperty [value: 1980.0]
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - profileDir: profiles/
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - profileName: StringProperty [value: DEFAULT]
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - randomSeed: -1
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=WINDOWS, version=11.17, build=16.07.2021 15.46)
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - saveFileExt: sav
+23:20:27.722 [FXGL Background Thread 3 ] DEBUG Engine               - scaledHeightProp$fxgl: DoubleProperty [bound, value: 823.0]
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - scaledWidthProp$fxgl: DoubleProperty [bound, value: 1485.0]
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - sceneFactory: com.almasb.fxgl.app.scene.SceneFactory@2e8cb007
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - secondsIn24h: 60
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuBack: menu/back.wav
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuPress: menu/press.wav
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuSelect: menu/select.wav
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - soundNotification: core/notification.wav
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - stageStyle: DECORATED
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
+23:20:27.723 [FXGL Background Thread 3 ] DEBUG Engine               - ticksPerSecond: -1
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - title: Speedy Plane
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/release/README.md
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - userAppClass: class com.almasb.fxglgames.flappy.FlappyBirdApp
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - version: 1.0
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - versionCheckDays: 7
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - width: 1980
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - Logging services
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLAssetLoaderService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.FXGLApplication$GameApplicationService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLDialogService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.IOTaskExecutorService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.io.FileSystemService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.localization.LocalizationService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.SystemBundleService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.profile.SaveLoadService
+23:20:27.724 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.audio.AudioPlayer
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.achievement.AchievementService
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.cutscene.CutsceneService
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.minigames.MiniGameService
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.net.NetService
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.UpdaterService
+23:20:27.725 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.dev.DevService
+23:20:28.097 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:28.098 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:28.098 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:28.098 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:28.099 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:28.099 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:28.103 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:28.103 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:28.103 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:28.103 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:28.103 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:28.105 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:28.106 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:28.110 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.004 sec
+23:20:28.110 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:28.113 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:28.113 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:29.003 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:29.073 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:29.248 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:29.248 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:29.249 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:29.250 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:29.922 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:29.922 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:29.923 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:29.923 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:29.923 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:29.923 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:29.925 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:29.925 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:29.925 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:29.925 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:29.925 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:29.926 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:29.926 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:29.929 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.003 sec
+23:20:29.929 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:29.931 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:29.932 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:30.855 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:30.891 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:31.072 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:31.073 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:31.074 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:31.074 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:31.753 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:31.753 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:31.753 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:31.753 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:31.753 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:31.753 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:31.756 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:31.756 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:31.756 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:31.756 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:31.756 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:31.756 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:31.756 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:31.759 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:31.759 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:31.762 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:31.762 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:32.730 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:32.819 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:32.971 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:32.971 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:32.972 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:32.973 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:33.650 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:33.650 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:33.650 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:33.651 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:33.651 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:33.651 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:33.652 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:33.653 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:33.653 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:33.653 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:33.653 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:33.653 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:33.653 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:33.656 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:33.656 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:33.658 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:33.658 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:34.610 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:34.676 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:34.843 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:34.843 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:34.843 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:34.844 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:35.417 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:35.417 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:35.417 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:35.417 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:35.417 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:35.418 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:35.419 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:35.420 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:35.420 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:35.420 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:35.420 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:35.420 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:35.420 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:35.423 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:35.423 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:35.425 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:35.425 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:36.483 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:36.549 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:37.386 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:37.449 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:37.713 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:37.713 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:37.714 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:37.714 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:38.698 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:38.698 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:38.698 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:38.698 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:38.698 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:38.698 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:38.702 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:38.702 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:38.703 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:38.703 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:38.703 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:38.703 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:38.703 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:38.705 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:38.706 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:38.709 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:38.709 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:39.787 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:39.866 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:40.752 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:40.752 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:40.753 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:40.753 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:41.490 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:41.490 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:41.491 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:41.491 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:41.491 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:41.491 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:41.493 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:41.493 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:41.493 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:41.493 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:41.493 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:41.494 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:41.494 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:41.495 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:20:41.496 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:41.498 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:41.498 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:42.555 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:42.610 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:42.953 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:42.953 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:42.954 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:42.954 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:43.618 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:43.618 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:43.618 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:43.619 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:43.619 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:43.619 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:43.620 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:43.621 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:43.621 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:43.621 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:43.621 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:43.621 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:43.621 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:43.624 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:43.624 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:43.627 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:43.627 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:44.721 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:44.721 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:44.722 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:44.722 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:45.402 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:45.402 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:45.402 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:45.402 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:45.402 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:45.402 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:45.404 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:45.404 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:45.404 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:45.404 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:45.404 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:45.404 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:45.405 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:45.407 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:45.407 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:45.409 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:45.409 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:46.452 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:46.522 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:47.355 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:47.400 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:47.724 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:47.724 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:47.725 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:47.725 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:48.554 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:48.554 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:48.555 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:48.555 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:48.555 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:48.555 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:48.556 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:48.556 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:48.557 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:48.557 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:48.557 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:48.557 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:48.557 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:48.559 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:48.560 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:48.561 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:48.561 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:49.663 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:49.663 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:49.664 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:49.664 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:50.547 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:50.547 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:50.547 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:50.547 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:50.547 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:50.547 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:50.549 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:50.549 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:50.549 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:50.549 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:50.549 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:50.550 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:50.550 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:50.552 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:20:50.552 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:50.554 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:50.554 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:51.633 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:51.633 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:51.633 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:51.633 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:52.346 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:52.347 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:52.347 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:52.347 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:52.347 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:52.347 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:52.349 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:52.349 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:52.349 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:52.349 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:52.349 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:52.349 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:52.349 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:52.351 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:52.353 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:52.355 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:52.355 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:53.302 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:53.370 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:53.538 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:53.538 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:53.538 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:53.538 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:54.154 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:54.154 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:54.154 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:54.154 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:54.154 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:54.154 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:54.156 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:20:54.156 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:20:54.156 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:54.156 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:54.156 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:54.157 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:54.157 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:54.159 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:54.159 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:54.161 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:54.161 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:55.179 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:55.243 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:55.534 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:55.534 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:55.535 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:55.535 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:20:56.698 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:20:56.698 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:56.699 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:20:56.699 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:20:56.699 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:56.700 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLMainMenuDummyScene
+23:20:56.701 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLMainMenuDummyScene
+23:20:56.701 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: FXGLDefaultMenu
+23:20:56.701 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:56.701 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLDefaultMenu
+23:20:56.702 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> FXGLDefaultMenu
+23:20:57.458 [JavaFX Application Thread] DEBUG Menu                 - fireNewGame()
+23:20:57.458 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:20:57.459 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: FXGLDefaultMenu
+23:20:57.459 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:57.459 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLDefaultMenu and adding to FXGLMainMenuDummyScene
+23:20:57.460 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene <- FXGLDefaultMenu
+23:20:57.460 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:57.462 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLLoadingScene
+23:20:57.462 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> FXGLLoadingScene
+23:20:57.462 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:20:57.462 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:20:57.462 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:20:57.462 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:20:57.462 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:20:57.465 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:20:57.466 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:57.469 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:20:57.469 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:20:58.515 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:58.580 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:59.413 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:20:59.491 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:20:59.904 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:20:59.905 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:20:59.905 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:20:59.905 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:00.738 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:00.738 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:00.738 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:00.738 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:00.739 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:00.739 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:00.740 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:00.740 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:00.740 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:00.740 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:00.740 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:00.741 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:00.741 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:00.743 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:21:00.743 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:00.745 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:00.745 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:01.828 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:01.899 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:02.801 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:02.801 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:02.802 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:02.802 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:03.890 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:03.891 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:03.891 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:03.891 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:03.891 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:03.891 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:03.893 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:03.893 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:03.893 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:03.893 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:03.893 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:03.893 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:03.894 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:03.896 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:21:03.896 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:03.897 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:03.897 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:05.008 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:05.009 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:05.009 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:05.009 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:05.715 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:05.715 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:05.715 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:05.715 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:05.715 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:05.715 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:05.717 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:05.717 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:05.717 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:05.717 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:05.717 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:05.717 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:05.718 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:05.719 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:05.720 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:05.722 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:05.722 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:06.790 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:06.867 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:07.772 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:07.773 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:07.773 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:07.773 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:08.515 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:08.515 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:08.515 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:08.515 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:08.516 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:08.516 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:08.517 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:08.517 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:08.517 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:08.517 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:08.517 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:08.517 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:08.518 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:08.519 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:08.519 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:08.523 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:08.523 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:09.580 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:09.659 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:10.017 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:10.017 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:10.017 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:10.017 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:10.762 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:10.762 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:10.763 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:10.763 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:10.763 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:10.763 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:10.764 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:10.764 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:10.764 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:10.765 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:10.765 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:10.765 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:10.765 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:10.767 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:21:10.767 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:10.769 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:10.769 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:11.844 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:11.927 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:12.756 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:12.819 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:13.056 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:13.056 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:13.056 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:13.056 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:13.755 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:13.755 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:13.755 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:13.756 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:13.756 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:13.756 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:13.758 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:13.758 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:13.758 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:13.758 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:13.758 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:13.758 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:13.758 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:13.760 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:13.761 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:13.763 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:13.763 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:14.844 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:14.934 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:15.225 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:15.225 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:15.226 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:15.226 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:15.956 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:15.956 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:15.956 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:15.956 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:15.956 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:15.956 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:15.958 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:15.958 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:15.958 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:15.958 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:15.958 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:15.958 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:15.958 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:15.960 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:21:15.961 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:15.962 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:15.962 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:17.056 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:17.056 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:17.056 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:17.057 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:17.795 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:17.795 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:17.795 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:17.795 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:17.795 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:17.795 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:17.797 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:17.797 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:17.797 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:17.797 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:17.797 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:17.797 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:17.797 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:17.799 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:17.799 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:17.801 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:17.801 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:18.772 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:18.822 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:19.071 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:19.071 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:19.071 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:19.071 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:19.675 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:19.675 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:19.675 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:19.675 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:19.676 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:19.676 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:19.677 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:19.677 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:19.677 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:19.677 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:19.677 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:19.677 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:19.678 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:19.679 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:21:19.681 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:19.683 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:19.684 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:20.729 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:20.811 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:21.720 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:21.796 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:22.160 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:22.161 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:22.161 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:22.161 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:22.867 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:22.867 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:22.868 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:22.868 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:22.868 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:22.868 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:22.869 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:22.869 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:22.869 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:22.869 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:22.870 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:22.870 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:22.870 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:22.872 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:22.872 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:22.874 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:22.874 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:23.969 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:23.969 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:23.970 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:23.970 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:25.012 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:25.012 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:25.012 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:25.012 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:25.012 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:25.012 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:25.015 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:25.016 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:25.016 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:25.016 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:25.016 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:25.016 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:25.016 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:25.017 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:25.018 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:25.019 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:25.019 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:26.093 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:26.165 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:26.924 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:27.015 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:27.264 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:27.265 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:27.265 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:27.265 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:27.948 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:27.948 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:27.948 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:27.948 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:27.949 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:27.949 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:27.950 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:27.950 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:27.950 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:27.950 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:27.950 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:27.950 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:27.950 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:27.952 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:27.953 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:27.954 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:27.955 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:29.073 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:29.073 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:29.073 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:29.073 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:29.964 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:29.964 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:29.965 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:29.965 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:29.965 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:29.965 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:29.966 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:29.966 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:29.966 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:29.966 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:29.966 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:29.967 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:29.967 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:29.969 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.001 sec
+23:21:29.969 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:29.971 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:29.971 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:31.052 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:31.052 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:31.053 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:31.053 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:31.755 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: DialogSubScene
+23:21:31.755 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:31.756 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to GameScene
+23:21:31.756 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- DialogSubScene
+23:21:31.756 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:21:31.756 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:31.757 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLLoadingScene
+23:21:31.757 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> FXGLLoadingScene
+23:21:31.757 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:21:31.757 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:21:31.757 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:21:31.758 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:21:31.758 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:21:31.760 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.002 sec
+23:21:31.761 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:31.762 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:21:31.762 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLLoadingScene -> GameScene
+23:21:32.749 [JavaFX Application Thread] DEBUG Input                - Mocking key press: Space
+23:21:32.820 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+23:21:33.051 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: DialogSubScene
+23:21:33.052 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:21:33.052 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to DialogSubScene
+23:21:33.052 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> DialogSubScene
+23:21:34.132 [JavaFX Application Thread] DEBUG FXGLApplication      - Exiting FXGL
+23:21:34.132 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+23:21:34.132 [JavaFX Application Thread] DEBUG SystemBundleService  - Saving FXGL system data
+23:21:34.133 [JavaFX Application Thread] DEBUG FileSystemAccess     - Writing to: C:\Users\chunh\IdeaProjects\catprojecttrail1\system\fxgl.bundle
+23:21:34.135 [JavaFX Application Thread] DEBUG Async                - Shutting down background threads
+23:21:34.135 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Closing main window
+23:21:34.151 [JavaFX Application Thread] DEBUG Logger               - Closing Logger
