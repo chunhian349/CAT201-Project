@@ -20,8 +20,7 @@ import javafx.util.Duration;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
-import static com.almasb.fxglgames.flappy.EntityType.PLAYER;
-import static com.almasb.fxglgames.flappy.EntityType.WALL;
+import static com.almasb.fxglgames.flappy.EntityType.*;
 
 /**
  * CAT201 project
@@ -71,7 +70,10 @@ public class FlappyBirdApp extends GameApplication {
 
     @Override
     protected void initPhysics() {
-        onCollisionBegin(PLAYER, WALL, (player, wall) -> {
+        onCollisionBegin(PLAYER, MOUNTAIN, (player, mountain) -> {
+            showGameOver();
+        });
+        onCollisionBegin(PLAYER, BIRD, (player, bird) -> {
             showGameOver();
         });
     }
