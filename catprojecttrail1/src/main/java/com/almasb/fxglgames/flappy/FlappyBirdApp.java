@@ -24,7 +24,7 @@ import static com.almasb.fxglgames.flappy.EntityType.PLAYER;
 import static com.almasb.fxglgames.flappy.EntityType.WALL;
 
 /**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
+ * CAT201 project
  */
 public class FlappyBirdApp extends GameApplication {
 

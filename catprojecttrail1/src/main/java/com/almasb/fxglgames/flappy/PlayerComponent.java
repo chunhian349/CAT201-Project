@@ -34,6 +34,6 @@ public class PlayerComponent extends Component {
     public void jump() {
         acceleration.addLocal(0, -5);
 
-        //play("jump.wav");
+        play("jump.wav");
     }
 }
