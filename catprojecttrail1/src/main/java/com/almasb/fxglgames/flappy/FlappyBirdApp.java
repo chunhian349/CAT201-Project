@@ -108,33 +108,19 @@ public class FlappyBirdApp extends GameApplication {
     }
 
     private void initBackground() {
-        /*Rectangle rect = new Rectangle(getAppWidth(), getAppHeight(), Color.WHITE);
-
-        Entity bg = entityBuilder()
-                .view(rect)
-                .with("rect", rect)
-                .with(new newBackground())
-                .buildAndAttach();*/
-
-
-
-        double ttlHeight = 0;
-        double lastCloud = 0;
 
         Texture background = texture("sky_photo.jpg");
             background.setFitWidth(getAppWidth());
             background.setFitHeight(getAppHeight());
 
-            //background.setFitHeight(0);
             Entity bg = entityBuilder()
-                    .at(0,0) //lastCloud, ttlHeight) //- (ttlHeight - 150))
+                    .at(0,0)
                     .type(EntityType.CLOUD)
                     .view(background)
                     .buildAndAttach();
-            //lastCloud += getAppWidth();
 
             bg.xProperty().bind(getGameScene().getViewport().xProperty());
-        bg.yProperty().bind(getGameScene().getViewport().yProperty());
+            bg.yProperty().bind(getGameScene().getViewport().yProperty());
     }
 
     private void initPlayer() {
