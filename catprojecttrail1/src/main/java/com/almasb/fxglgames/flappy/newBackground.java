@@ -27,7 +27,7 @@ public class newBackground extends Component {
         //for (int i = 1; i <= 20; ++i) {
             entityBuilder()
                     .at(lastCloud, ttlHeight - (ttlHeight - 150))
-                    .type(EntityType.WALL)
+                    .type(EntityType.CLOUD)
                     .view(cloud)
                     .buildAndAttach();
         //}
