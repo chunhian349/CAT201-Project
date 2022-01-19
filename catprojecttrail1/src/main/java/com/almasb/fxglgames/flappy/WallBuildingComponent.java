@@ -29,7 +29,7 @@ public class WallBuildingComponent extends Component {
         Random rd = new Random();
 
         if ((lastBird - entity.getX() < FXGL.getAppWidth()) && (lastMount - entity.getX() < FXGL.getAppWidth())){
-            if(rd.nextBoolean() == true) {
+            if(rd.nextBoolean()) {
                 birdSpawn();
             }
             else{
@@ -55,6 +55,7 @@ public class WallBuildingComponent extends Component {
 
         //}
         lastBird += 10 * 500;
+        lastMount += 10 * 500;
     }
     private void mountainSpawn() {
         Texture wallTxt = texture("blue_mountain.png");
@@ -71,6 +72,7 @@ public class WallBuildingComponent extends Component {
                 .buildAndAttach();
         //}
         lastMount += 10 * 500;
+        lastBird += 10 * 500;
     }
 
 }

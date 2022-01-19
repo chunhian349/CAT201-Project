@@ -1,2 +1,7 @@
 
 .idea/
+/logs/
+/system/
+/catprojecttrail1/target/
+
+*.class
