@@ -20,22 +20,23 @@ import javafx.util.Duration;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
+import static com.almasb.fxglgames.flappy.EntityType.MOUNTAIN;
 import static com.almasb.fxglgames.flappy.EntityType.PLAYER;
-import static com.almasb.fxglgames.flappy.EntityType.WALL;
+import static com.almasb.fxglgames.flappy.EntityType.BIRD;
 
 /**
- * CAT201 project
+ * @author Almas Baimagambetov (almaslvl@gmail.com)
  */
 public class FlappyBirdApp extends GameApplication {
 
     private PlayerComponent playerComponent;
-    //private boolean requestNewGame = false;
+    private boolean requestNewGame = false;
 
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1980);
         settings.setHeight(1080);
-        settings.setTitle("Speedy Plane");
+        settings.setTitle("Flappy Bird Clone");
         settings.setVersion("1.0");
         settings.setMainMenuEnabled(true);
     }
@@ -71,7 +72,10 @@ public class FlappyBirdApp extends GameApplication {
 
     @Override
     protected void initPhysics() {
-        onCollisionBegin(PLAYER, WALL, (player, wall) -> {
+        onCollisionBegin(PLAYER, MOUNTAIN, (player, mountain) -> {
+            showGameOver();
+        });
+        onCollisionBegin(PLAYER, BIRD, (player, bird) -> {
             showGameOver();
         });
     }
@@ -98,10 +102,10 @@ public class FlappyBirdApp extends GameApplication {
             showGameOver();
         }
 
-        /*if (requestNewGame) {
+        if (requestNewGame) {
             requestNewGame = false;
             getGameController().startNewGame();
-        }*/
+        }
     }
 
     private void initBackground() {
@@ -162,3 +166,4 @@ public class FlappyBirdApp extends GameApplication {
         launch(args);
     }
 }
+

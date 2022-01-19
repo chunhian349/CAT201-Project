@@ -4,7 +4,7 @@ import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.component.Component;
 
-import static com.almasb.fxgl.dsl.FXGL.*;
+import static com.almasb.fxgl.dsl.FXGL.getAppHeight;
 
 /**
  * @author Almas Baimagambetov (almaslvl@gmail.com)
@@ -15,7 +15,7 @@ public class PlayerComponent extends Component {
 
     @Override
     public void onUpdate(double tpf) {
-        acceleration.x += tpf * 0.1;
+        acceleration.x += tpf * 0.2;
         acceleration.y += tpf * 10;
 
         if (acceleration.y < -5)
@@ -34,6 +34,6 @@ public class PlayerComponent extends Component {
     public void jump() {
         acceleration.addLocal(0, -5);
 
-        play("jump.wav");
+        //play("jump.wav");
     }
 }

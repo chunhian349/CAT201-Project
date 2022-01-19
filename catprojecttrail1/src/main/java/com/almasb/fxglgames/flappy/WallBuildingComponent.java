@@ -1,60 +1,72 @@
 package com.almasb.fxglgames.flappy;
 
 import com.almasb.fxgl.dsl.FXGL;
-import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.texture.Texture;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
-import static com.almasb.fxgl.dsl.FXGL.*;
+import java.util.Random;
 
-/**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
- */
+import static com.almasb.fxgl.dsl.FXGL.entityBuilder;
+import static com.almasb.fxgl.dsl.FXGL.texture;
+
 public class WallBuildingComponent extends Component {
 
-    private double lastWall = 1000;
+    private double lastBird = 5;
+    private double lastMount = 5;
+    double height = FXGL.getAppHeight();
 
     @Override
     public void onUpdate(double tpf) {
-        if (lastWall - entity.getX() < FXGL.getAppWidth()) {
-            birdMountains();
+        Random rd = new Random();
+
+        if ((lastBird - entity.getX() < FXGL.getAppWidth()) && (lastMount - entity.getX() < FXGL.getAppWidth())){
+            if(rd.nextBoolean()) {
+                birdSpawn();
+            }
+            else{
+                mountainSpawn();
+            }
         }
     }
 
-    private void birdMountains() {
-        double height = FXGL.getAppHeight();
-        Texture wallTxt = texture("blue_mountain.png");
-            wallTxt.setPreserveRatio(true);
-            wallTxt.setFitHeight(300);
+    private void birdSpawn() {
         Texture birdTxt = texture("bird.png");
-            birdTxt.setPreserveRatio(true);
-            birdTxt.setFitHeight(200);
+        birdTxt.setPreserveRatio(true);
+        birdTxt.setFitHeight(200);
 
-            entityBuilder()
-                    .at(lastWall, height - (height - 150))
-                    .type(EntityType.WALL)
-                    .view(new Rectangle(325, 200))
-                    .viewWithBBox(birdTxt)
-                    .with(new CollidableComponent(true))
-                    .buildAndAttach();
+        //for (int i = 1; i <= 20; i++) {
 
-            entityBuilder()
-                    .at(lastWall, height - 300)
-                    .type(EntityType.WALL)
-                    .view(new Rectangle(1000, 300))
-                    .viewWithBBox(wallTxt)
-                    .with(new CollidableComponent(true))
-                    .buildAndAttach();
+        entityBuilder()
+                .at(lastBird, height - (height - 150))
+                .type(EntityType.BIRD)
+                .bbox(new HitBox(BoundingShape.box(300,200)))
+                .view(birdTxt)
+                .with(new CollidableComponent(true))
+                .buildAndAttach();
 
-            final int MIN = 2;
-            final int MAX = 10;
-            lastWall += (Math.random() % MAX + MIN) * getAppWidth();
+        //}
+        lastBird += 10 * 500;
+        lastMount += 10 * 500;
+    }
+    private void mountainSpawn() {
+        Texture wallTxt = texture("blue_mountain.png");
+        wallTxt.setPreserveRatio(true);
+        wallTxt.setFitHeight(300);
+        //for (int i = 1; i <= 20; i++) {
+
+        entityBuilder()
+                .at(lastMount, height - 200)
+                .type(EntityType.MOUNTAIN)
+                .bbox(new HitBox(BoundingShape.box(600,300)))
+                .view(wallTxt)
+                .with(new CollidableComponent(true))
+                .buildAndAttach();
+        //}
+        lastBird += 10 * 500;
+        lastMount += 10 * 500;
     }
 
 
