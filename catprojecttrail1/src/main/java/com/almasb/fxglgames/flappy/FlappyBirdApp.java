@@ -20,21 +20,22 @@ import javafx.util.Duration;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
+
 import static com.almasb.fxglgames.flappy.EntityType.*;
 
 /**
- * CAT201 project
+ * @author Almas Baimagambetov (almaslvl@gmail.com)
  */
 public class FlappyBirdApp extends GameApplication {
 
     private PlayerComponent playerComponent;
-    //private boolean requestNewGame = false;
+    private boolean requestNewGame = false;
 
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setWidth(1980);
         settings.setHeight(1080);
-        settings.setTitle("Speedy Plane");
+        settings.setTitle("Flappy Bird Clone");
         settings.setVersion("1.0");
         settings.setMainMenuEnabled(true);
     }
@@ -100,10 +101,10 @@ public class FlappyBirdApp extends GameApplication {
             showGameOver();
         }
 
-        /*if (requestNewGame) {
+        if (requestNewGame) {
             requestNewGame = false;
             getGameController().startNewGame();
-        }*/
+        }
     }
 
     private void initBackground() {
@@ -164,3 +165,4 @@ public class FlappyBirdApp extends GameApplication {
         launch(args);
     }
 }
+

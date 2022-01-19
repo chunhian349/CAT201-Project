@@ -1,15 +1,11 @@
 package com.almasb.fxglgames.flappy;
 
 import com.almasb.fxgl.dsl.FXGL;
-import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.texture.Texture;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 import java.util.Random;
 
@@ -18,6 +14,7 @@ import static com.almasb.fxgl.dsl.FXGL.*;
 /**
  * CAT201 PROJECT
  */
+
 public class WallBuildingComponent extends Component {
 
     private double lastBird = 5;
@@ -29,7 +26,7 @@ public class WallBuildingComponent extends Component {
         Random rd = new Random();
 
         if ((lastBird - entity.getX() < FXGL.getAppWidth()) && (lastMount - entity.getX() < FXGL.getAppWidth())){
-            if(rd.nextBoolean() == true) {
+            if(rd.nextBoolean()) {
                 birdSpawn();
             }
             else{
@@ -55,6 +52,9 @@ public class WallBuildingComponent extends Component {
 
         //}
         lastBird += 10 * 500;
+
+        lastMount += 10 * 500;
+
     }
     private void mountainSpawn() {
         Texture wallTxt = texture("blue_mountain.png");
@@ -70,6 +70,8 @@ public class WallBuildingComponent extends Component {
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
         //}
+        lastBird += 10 * 500;
+
         lastMount += 10 * 500;
     }
 
