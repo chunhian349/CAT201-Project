@@ -55,10 +55,10 @@ public class FlappyBirdApp extends GameApplication {
         vars.put("score", 0);
     }
 
-    @Override
-    protected void onPreInit() {
-        loopBGM("bgm.mp3");
-    }
+    //@Override
+    //protected void onPreInit() {
+    //    loopBGM("bgm.mp3");
+    //}
 
     @Override
     protected void initGame() {
@@ -108,15 +108,32 @@ public class FlappyBirdApp extends GameApplication {
     }
 
     private void initBackground() {
-        Rectangle rect = new Rectangle(getAppWidth(), getAppHeight(), Color.WHITE);
+        /*Rectangle rect = new Rectangle(getAppWidth(), getAppHeight(), Color.WHITE);
 
         Entity bg = entityBuilder()
                 .view(rect)
                 .with("rect", rect)
                 .with(new newBackground())
-                .buildAndAttach();
+                .buildAndAttach();*/
 
-        bg.xProperty().bind(getGameScene().getViewport().xProperty());
+
+
+        double ttlHeight = 0;
+        double lastCloud = 0;
+
+        Texture background = texture("sky_photo.jpg");
+            background.setFitWidth(getAppWidth());
+            background.setFitHeight(getAppHeight());
+
+            //background.setFitHeight(0);
+            Entity bg = entityBuilder()
+                    .at(0,0) //lastCloud, ttlHeight) //- (ttlHeight - 150))
+                    .type(EntityType.CLOUD)
+                    .view(background)
+                    .buildAndAttach();
+            //lastCloud += getAppWidth();
+
+            bg.xProperty().bind(getGameScene().getViewport().xProperty());
         bg.yProperty().bind(getGameScene().getViewport().yProperty());
     }
 

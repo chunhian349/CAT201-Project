@@ -9,17 +9,19 @@ import javafx.scene.shape.Rectangle;
 import static com.almasb.fxgl.dsl.FXGL.*;
 
 public class newBackground extends Component {
-    private double ttlHeight = FXGL.getAppHeight();
-    private double lastCloud = 3;
+    private double ttlHeight = 0;
+    private double lastCloud = 0;
+    
+// Class may not needed
 
     @Override
     public void onUpdate(double tpf){
         if (lastCloud - entity.getX() < FXGL.getAppWidth()) {
-            newBgk();
+            newBackground();
         }
     }
 
-    public void newBgk() {
+    /*public void newBgk() {
         Texture cloud = texture("cloud.png");
         cloud.setPreserveRatio(true);
         cloud.setFitHeight(150);
@@ -32,6 +34,20 @@ public class newBackground extends Component {
                     .buildAndAttach();
         //}
         lastCloud += 5 * 500;
+    }*/
+
+    public void newBackground() {
+        Texture background = texture("sky_photo.jpg");
+        background.setFitWidth(getAppWidth());
+        background.setFitHeight(getAppHeight());
+
+        //background.setFitHeight(0);
+        entityBuilder()
+                .at(lastCloud, ttlHeight) //- (ttlHeight - 150))
+                .type(EntityType.CLOUD)
+                .view(background)
+                .buildAndAttach();
+                lastCloud += getAppWidth();
     }
 }
 

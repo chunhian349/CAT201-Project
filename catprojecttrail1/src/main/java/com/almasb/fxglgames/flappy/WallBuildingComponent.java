@@ -52,9 +52,7 @@ public class WallBuildingComponent extends Component {
 
         //}
         lastBird += 10 * 500;
-
         lastMount += 10 * 500;
-
     }
     private void mountainSpawn() {
         Texture wallTxt = texture("blue_mountain.png");
@@ -73,6 +71,7 @@ public class WallBuildingComponent extends Component {
         lastBird += 10 * 500;
 
         lastMount += 10 * 500;
+        lastBird += 10 * 500;
     }
 
 }
