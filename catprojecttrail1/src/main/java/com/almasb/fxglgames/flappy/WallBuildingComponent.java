@@ -17,8 +17,8 @@ import static com.almasb.fxgl.dsl.FXGL.*;
 
 public class WallBuildingComponent extends Component {
 
-    private double lastBird = 5;
-    private double lastMount = 5;
+    private double lastBird = 1000;
+    private double lastMount = 1000;
     double height = FXGL.getAppHeight();
 
     @Override
@@ -36,42 +36,41 @@ public class WallBuildingComponent extends Component {
     }
 
     private void birdSpawn() {
-        Texture birdTxt = texture("bird.png");
+        Texture birdTxt = texture("birds.png");
         birdTxt.setPreserveRatio(true);
-        birdTxt.setFitHeight(200);
+        birdTxt.setFitHeight(250);
 
         //for (int i = 1; i <= 20; i++) {
 
         entityBuilder()
-                .at(lastBird, height - (height - 150))
+                .at(lastBird, (int)(Math.random()*200))
                 .type(EntityType.BIRD)
-                .bbox(new HitBox(BoundingShape.box(300,200)))
+                .bbox(new HitBox(BoundingShape.box(390,250)))
                 .view(birdTxt)
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
 
         //}
-        lastBird += 10 * 500;
-        lastMount += 10 * 500;
+        lastBird += 2500;
+        lastMount += 2500;
     }
     private void mountainSpawn() {
-        Texture wallTxt = texture("blue_mountain.png");
+        Texture wallTxt = texture("mountain.png");
         wallTxt.setPreserveRatio(true);
-        wallTxt.setFitHeight(300);
+        wallTxt.setFitHeight(600);
         //for (int i = 1; i <= 20; i++) {
 
         entityBuilder()
-                .at(lastMount, height - 200)
+                .at(lastMount, height - 600)
                 .type(EntityType.MOUNTAIN)
-                .bbox(new HitBox(BoundingShape.box(600,300)))
+                .bbox(new HitBox(BoundingShape.box(670,570)))
                 .view(wallTxt)
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
         //}
-        lastBird += 10 * 500;
+        lastBird += 2500;
+        lastMount += 2500;
 
-        lastMount += 10 * 500;
-        lastBird += 10 * 500;
     }
 
 }
