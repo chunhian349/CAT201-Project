@@ -1,7 +1,7 @@
 package com.almasb.fxglgames.flappy;
 
 /**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
+ * CAT201 PROJECT
  */
 public enum EntityType {
     PLAYER, MOUNTAIN, BIRD, CLOUD
