@@ -4,19 +4,15 @@ import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.input.UserAction;
-import com.almasb.fxgl.input.virtual.VirtualButton;
+import com.almasb.fxgl.input.*;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.texture.Texture;
-import javafx.scene.Group;
-import javafx.scene.input.KeyCode;
+import javafx.scene.input.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -42,11 +38,17 @@ public class FlappyBirdApp extends GameApplication {
 
     @Override
     protected void initInput() {
-        getInput().addAction(new UserAction("Jump") {
+
+        UserAction jump = new UserAction("Jump") {
             @Override
-            protected void onAction() { playerComponent.jump();
+            protected void onAction() {
+                playerComponent.jump();
             }       // onActionBegin() to onAction() to hold to go up
-        }, KeyCode.SPACE, VirtualButton.UP);
+        };
+
+        //Click or hold left mouse click to fly
+        getInput().addAction(jump, MouseButton.PRIMARY);
+
     }
 
     @Override
@@ -89,10 +91,6 @@ public class FlappyBirdApp extends GameApplication {
         uiScore.textProperty().bind(getip("score").asString());
 
         addUINode(uiScore);
-
-        Group dpadView = getInput().createVirtualDpadView();
-
-        addUINode(dpadView, 0, 625);
     }
 
     @Override
