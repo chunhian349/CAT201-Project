@@ -8,7 +8,6 @@ import com.almasb.fxgl.input.*;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.texture.Texture;
-import javafx.event.EventHandler;
 import javafx.scene.input.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -47,8 +46,7 @@ public class FlappyBirdApp extends GameApplication {
             }       // onActionBegin() to onAction() to hold to go up
         };
 
-        //No button image but can hold the leftclick to fly
-        //And cannot bind to SPACE key at the same time
+        //Click or hold left mouse click to fly
         getInput().addAction(jump, MouseButton.PRIMARY);
 
     }
@@ -93,22 +91,6 @@ public class FlappyBirdApp extends GameApplication {
         uiScore.textProperty().bind(getip("score").asString());
 
         addUINode(uiScore);
-
-        //Group dpadView = getInput().createVirtualDpadView();
-
-        //Got button image but it only jump once like setOnMouseClicked
-        Texture upArrow =  texture("up_arrow.png");
-        upArrow.setPreserveRatio(true);
-        upArrow.setFitHeight(150);
-        upArrow.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                playerComponent.jump();
-            }
-        });
-
-        addUINode(upArrow, 100, 800);
-
     }
 
     @Override
