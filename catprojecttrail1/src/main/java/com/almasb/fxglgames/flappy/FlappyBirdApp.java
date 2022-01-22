@@ -4,19 +4,16 @@ import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.input.UserAction;
-import com.almasb.fxgl.input.virtual.VirtualButton;
+import com.almasb.fxgl.input.*;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.texture.Texture;
-import javafx.scene.Group;
-import javafx.scene.input.KeyCode;
+import javafx.event.EventHandler;
+import javafx.scene.input.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -42,11 +39,18 @@ public class FlappyBirdApp extends GameApplication {
 
     @Override
     protected void initInput() {
-        getInput().addAction(new UserAction("Jump") {
+
+        UserAction jump = new UserAction("Jump") {
             @Override
-            protected void onAction() { playerComponent.jump();
+            protected void onAction() {
+                playerComponent.jump();
             }       // onActionBegin() to onAction() to hold to go up
-        }, KeyCode.SPACE, VirtualButton.UP);
+        };
+
+        //No button image but can hold the leftclick to fly
+        //And cannot bind to SPACE key at the same time
+        getInput().addAction(jump, MouseButton.PRIMARY);
+
     }
 
     @Override
@@ -90,9 +94,21 @@ public class FlappyBirdApp extends GameApplication {
 
         addUINode(uiScore);
 
-        Group dpadView = getInput().createVirtualDpadView();
+        //Group dpadView = getInput().createVirtualDpadView();
 
-        addUINode(dpadView, 0, 625);
+        //Got button image but it only jump once like setOnMouseClicked
+        Texture upArrow =  texture("up_arrow.png");
+        upArrow.setPreserveRatio(true);
+        upArrow.setFitHeight(150);
+        upArrow.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                playerComponent.jump();
+            }
+        });
+
+        addUINode(upArrow, 100, 800);
+
     }
 
     @Override
