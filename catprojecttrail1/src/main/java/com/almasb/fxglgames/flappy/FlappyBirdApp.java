@@ -29,7 +29,6 @@ import static com.almasb.fxglgames.flappy.EntityType.*;
 public class FlappyBirdApp extends GameApplication {
 
     private PlayerComponent playerComponent;
-    private boolean requestNewGame = false;
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -62,7 +61,6 @@ public class FlappyBirdApp extends GameApplication {
 
     @Override
     protected void initGame() {
-        initGameBGM();
         initBackground();
         initPlayer();
         getGameTimer().runAtInterval(() -> {            // count the score by 1
@@ -90,18 +88,6 @@ public class FlappyBirdApp extends GameApplication {
         Group dpadView = getInput().createVirtualDpadView();
 
         addUINode(dpadView, 0, 625);
-    }
-
-    @Override
-    protected void onUpdate(double tpf) {
-        if (geti("score") == 3000) {
-            showGameOver();
-        }
-
-        if (requestNewGame) {
-            requestNewGame = false;
-            getGameController().startNewGame();
-        }
     }
 
     private void initBackground() {
@@ -142,21 +128,21 @@ public class FlappyBirdApp extends GameApplication {
     }
 
     private void initMenuBGM(){
-        getAudioPlayer().stopAllMusic();
+        getAudioPlayer().stopAllSoundsAndMusic();
         Music menuBGM = getAssetLoader().loadMusic("bgm1.mp3");
         getAudioPlayer().loopMusic(menuBGM);
     }
 
-    private void initGameBGM(){
-        getAudioPlayer().stopAllMusic();
+    /*private void initGameBGM(){
+        getAudioPlayer().stopAllSoundsAndMusic();
         Music menuBGM = getAssetLoader().loadMusic("bgm2.mp3");
         getAudioPlayer().loopMusic(menuBGM);
-    }
+    }*/
 
     private void initDeathSF(){
-        getAudioPlayer().stopAllMusic();
-        Music deathSF = getAssetLoader().loadMusic("dying.mp3");
-        getAudioPlayer().loopMusic(deathSF);
+        getAudioPlayer().stopAllSoundsAndMusic();
+        Sound deathSF = getAssetLoader().loadSound("dying.mp3");
+        getAudioPlayer().playSound(deathSF);
     }
 
     public void showGameOver() {
@@ -171,6 +157,7 @@ public class FlappyBirdApp extends GameApplication {
         {
             if(yes)
             {
+                initMenuBGM();
                 getGameController().startNewGame();
             }
             else
