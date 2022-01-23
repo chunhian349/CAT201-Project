@@ -3,6 +3,7 @@ package com.almasb.fxglgames.flappy;
 import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.audio.*;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.*;
 import com.almasb.fxgl.physics.BoundingShape;
@@ -20,12 +21,11 @@ import static com.almasb.fxgl.dsl.FXGL.*;
 import static com.almasb.fxglgames.flappy.EntityType.*;
 
 /**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
+ * CAT201 PROJECT
  */
 public class FlappyBirdApp extends GameApplication {
 
     private PlayerComponent playerComponent;
-    private boolean requestNewGame = false;
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -57,10 +57,10 @@ public class FlappyBirdApp extends GameApplication {
         vars.put("score", 0);
     }
 
-    //@Override
-    //protected void onPreInit() {
-    //    loopBGM("bgm.mp3");
-    //}
+    @Override
+    protected void onPreInit() {
+        initMenuBGM();
+    }
 
     @Override
     protected void initGame() {
@@ -73,12 +73,8 @@ public class FlappyBirdApp extends GameApplication {
 
     @Override
     protected void initPhysics() {
-        onCollisionBegin(PLAYER, MOUNTAIN, (player, mountain) -> {
-            showGameOver();
-        });
-        onCollisionBegin(PLAYER, BIRD, (player, bird) -> {
-            showGameOver();
-        });
+        onCollisionBegin(PLAYER, MOUNTAIN, (player, mountain) -> showGameOver());
+        onCollisionBegin(PLAYER, BIRD, (player, bird) -> showGameOver());
     }
 
     @Override
@@ -91,18 +87,6 @@ public class FlappyBirdApp extends GameApplication {
         uiScore.textProperty().bind(getip("score").asString());
 
         addUINode(uiScore);
-    }
-
-    @Override
-    protected void onUpdate(double tpf) {
-        if (geti("score") == 3000) {
-            showGameOver();
-        }
-
-        if (requestNewGame) {
-            requestNewGame = false;
-            getGameController().startNewGame();
-        }
     }
 
     private void initBackground() {
@@ -142,7 +126,26 @@ public class FlappyBirdApp extends GameApplication {
         spawnWithScale(player, Duration.seconds(0.86), Interpolators.BOUNCE.EASE_OUT());
     }
 
+    private void initMenuBGM(){
+        getAudioPlayer().stopAllSoundsAndMusic();
+        Music menuBGM = getAssetLoader().loadMusic("bgm1.mp3");
+        getAudioPlayer().loopMusic(menuBGM);
+    }
+
+    /*private void initGameBGM(){
+        getAudioPlayer().stopAllSoundsAndMusic();
+        Music menuBGM = getAssetLoader().loadMusic("bgm2.mp3");
+        getAudioPlayer().loopMusic(menuBGM);
+    }*/
+
+    private void initDeathSF(){
+        getAudioPlayer().stopAllSoundsAndMusic();
+        Sound deathSF = getAssetLoader().loadSound("dying.mp3");
+        getAudioPlayer().playSound(deathSF);
+    }
+
     public void showGameOver() {
+        initDeathSF();
         StringBuilder builder = new StringBuilder();
         builder.append("Game Over!\n\n");
         builder.append("Final score: ")
@@ -153,10 +156,12 @@ public class FlappyBirdApp extends GameApplication {
         {
             if(yes)
             {
+                initMenuBGM();
                 getGameController().startNewGame();
             }
             else
             {
+                initMenuBGM();
                 getGameController().gotoMainMenu();
             }
         });

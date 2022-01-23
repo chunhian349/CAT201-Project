@@ -7,7 +7,7 @@ import com.almasb.fxgl.entity.component.Component;
 import static com.almasb.fxgl.dsl.FXGL.getAppHeight;
 
 /**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
+ * CAT201 PROJECT
  */
 public class PlayerComponent extends Component {
 
@@ -33,7 +33,5 @@ public class PlayerComponent extends Component {
 
     public void jump() {
         acceleration.addLocal(0, -5);
-
-        //play("jump.wav");
     }
 }
