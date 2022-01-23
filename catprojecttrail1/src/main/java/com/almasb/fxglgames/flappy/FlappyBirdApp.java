@@ -3,7 +3,10 @@ package com.almasb.fxglgames.flappy;
 import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.app.scene.FXGLMenu;
+import com.almasb.fxgl.app.scene.SceneFactory;
 import com.almasb.fxgl.audio.*;
+import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.*;
 import com.almasb.fxgl.physics.BoundingShape;
@@ -34,6 +37,13 @@ public class FlappyBirdApp extends GameApplication {
         settings.setTitle("Flappy Bird Clone");
         settings.setVersion("1.0");
         settings.setMainMenuEnabled(true);
+        settings.addEngineService(playerScore.class);
+        settings.setSceneFactory(new SceneFactory(){
+            @Override
+            public FXGLMenu newMainMenu(){
+                return new spMainMenu();
+            }
+        });
     }
 
     @Override
@@ -148,23 +158,38 @@ public class FlappyBirdApp extends GameApplication {
         initDeathSF();
         StringBuilder builder = new StringBuilder();
         builder.append("Game Over!\n\n");
-        builder.append("Final score: ")
-                .append(geti("score"))
-                .append("\n\n");
-        builder.append("Would you like to restart?");
-        getDialogService().showConfirmationBox(builder.toString(), yes ->
-        {
-            if(yes)
+        if(geti("score") > FXGL.getService(playerScore.class).getHighestScore()){
+            enterScore();
+        }else {
+            builder.append("Final score: ")
+                    .append(geti("score"))
+                    .append("\n\n");
+            builder.append("Would you like to restart?");
+            getDialogService().showConfirmationBox(builder.toString(), yes ->
             {
-                initMenuBGM();
-                getGameController().startNewGame();
-            }
-            else
-            {
-                initMenuBGM();
-                getGameController().gotoMainMenu();
-            }
-        });
+                if (yes) {
+                    initMenuBGM();
+                    getGameController().startNewGame();
+                } else {
+                    initMenuBGM();
+                    getGameController().gotoMainMenu();
+                }
+            });
+        }
+    }
+
+    public void enterScore(){
+        StringBuilder builder = new StringBuilder();
+        //playerScore ps = FXGL.getService(playerScore.class);
+
+        getDialogService().showInputBox("New High score:" + geti("score") + "\nEnter your name",
+                s -> s.matches("[a-zA-Z]*"), name -> {
+
+                    getService(playerScore.class).setScore(String.valueOf(geti("score")));
+                    getService(playerScore.class).setName(name);
+                    String scnm = getService(playerScore.class).getName() + " " + getService(playerScore.class).getScore();
+                    getService(playerScore.class).setScorename(scnm);
+                });
     }
 
     public static void main(String[] args) {

@@ -1,0 +1,10 @@
+Ray 10
+UKM 1
+Cat 3
+Dog 4
+Ray 5
+Zebra 6
+Octopus 7
+Squid 8
+Crab 9
+USM 2
