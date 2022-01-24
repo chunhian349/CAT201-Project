@@ -36,6 +36,7 @@ public class FlappyBirdApp extends GameApplication {
         settings.setHeight(1080);
         settings.setTitle("Flappy Bird Clone");
         settings.setVersion("1.0");
+        settings.setAppIcon("plane.png");
         settings.setMainMenuEnabled(true);
         settings.addEngineService(playerScore.class);
         settings.setSceneFactory(new SceneFactory(){
@@ -78,13 +79,18 @@ public class FlappyBirdApp extends GameApplication {
         initPlayer();
         getGameTimer().runAtInterval(() -> {            // count the score by 1
             inc("score", +1);
-        }, Duration.seconds(1));
+        }, Duration.millis(100));
     }
 
     @Override
     protected void initPhysics() {
         onCollisionBegin(PLAYER, MOUNTAIN, (player, mountain) -> showGameOver());
         onCollisionBegin(PLAYER, BIRD, (player, bird) -> showGameOver());
+        onCollisionBegin(PLAYER, COIN, (player, coin) -> {
+            getAudioPlayer().playSound(getAssetLoader().loadSound("coin_sound.mp3"));
+            coin.removeFromWorld();
+            inc("score", +25);
+        });
     }
 
     @Override
@@ -119,12 +125,12 @@ public class FlappyBirdApp extends GameApplication {
         playerComponent = new PlayerComponent();
         Texture plane = texture("plane.png");
         plane.setPreserveRatio(true);
-        plane.setFitHeight(50);
+        plane.setFitHeight(75);
 
         Entity player = entityBuilder()
                 .at(100, 500)
                 .type(PLAYER)
-                .bbox(new HitBox(BoundingShape.box(74, 50)))
+                .bbox(new HitBox(BoundingShape.box(111, 75)))
                 .view(plane)
                 .collidable()
                 .with(playerComponent, new WallBuildingComponent())
@@ -133,7 +139,7 @@ public class FlappyBirdApp extends GameApplication {
         getGameScene().getViewport().setBounds(0, 0, Integer.MAX_VALUE, getAppHeight());
         getGameScene().getViewport().bindToEntity(player, getAppWidth() / 3, getAppHeight() / 2);
 
-        spawnWithScale(player, Duration.seconds(0.86), Interpolators.BOUNCE.EASE_OUT());
+        spawnWithScale(player, Duration.seconds(0.01), Interpolators.BOUNCE.EASE_OUT());
     }
 
     private void initMenuBGM(){
@@ -158,38 +164,40 @@ public class FlappyBirdApp extends GameApplication {
         initDeathSF();
         StringBuilder builder = new StringBuilder();
         builder.append("Game Over!\n\n");
-        if(geti("score") > FXGL.getService(playerScore.class).getHighestScore()){
-            enterScore();
-        }else {
-            builder.append("Final score: ")
-                    .append(geti("score"))
-                    .append("\n\n");
-            builder.append("Would you like to restart?");
-            getDialogService().showConfirmationBox(builder.toString(), yes ->
-            {
-                if (yes) {
-                    initMenuBGM();
-                    getGameController().startNewGame();
-                } else {
-                    initMenuBGM();
-                    getGameController().gotoMainMenu();
-                }
-            });
-        }
+        builder.append("Final score: ")
+                .append(geti("score"))
+                .append("\n\n");
+        builder.append("Would you like to restart?");
+        getDialogService().showConfirmationBox(builder.toString(), yes ->
+        {
+            if (yes) {
+                initMenuBGM();
+                getGameController().startNewGame();
+            } else {
+                initMenuBGM();
+                getGameController().gotoMainMenu();
+            }
+
+        });
+        enterScore();
+
     }
 
     public void enterScore(){
-        StringBuilder builder = new StringBuilder();
-        //playerScore ps = FXGL.getService(playerScore.class);
+        if(geti("score") > FXGL.getService(playerScore.class).getHighestScore()) {
+        StringBuilder highscore = new StringBuilder();
+        highscore.append("New High score: ")
+                .append(geti("score"))
+                .append("\nEnter your name");
+            getDialogService().showInputBox(highscore.toString(),
+                    s -> s.matches("[a-zA-Z]*"), name -> {
 
-        getDialogService().showInputBox("New High score:" + geti("score") + "\nEnter your name",
-                s -> s.matches("[a-zA-Z]*"), name -> {
-
-                    getService(playerScore.class).setScore(String.valueOf(geti("score")));
-                    getService(playerScore.class).setName(name);
-                    String scnm = getService(playerScore.class).getName() + " " + getService(playerScore.class).getScore();
-                    getService(playerScore.class).setScorename(scnm);
-                });
+                        getService(playerScore.class).setScore(String.valueOf(geti("score")));
+                        getService(playerScore.class).setName(name);
+                        String scnm = getService(playerScore.class).getName() + " " + getService(playerScore.class).getScore();
+                        getService(playerScore.class).setScorename(scnm);
+                    });
+        }
     }
 
     public static void main(String[] args) {
