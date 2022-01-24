@@ -36,6 +36,7 @@ public class FlappyBirdApp extends GameApplication {
         settings.setHeight(1080);
         settings.setTitle("Flappy Bird Clone");
         settings.setVersion("1.0");
+        settings.setAppIcon("plane.png");
         settings.setMainMenuEnabled(true);
         settings.addEngineService(playerScore.class);
         settings.setSceneFactory(new SceneFactory(){
