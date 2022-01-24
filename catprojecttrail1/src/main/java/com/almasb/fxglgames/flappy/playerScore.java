@@ -34,8 +34,6 @@ public class playerScore extends EngineService {
 
     public playerScore() {
         readScore();
-        for(int x=0; x<MAX; ++x)
-            System.out.println("Constrcutor: "+scorename[x]);
     }
 
     public void setScorename(String sn){
@@ -91,12 +89,10 @@ public class playerScore extends EngineService {
         int index = 0;
         for(int i=1; i<MAX; ++i){
             if(scores[i] < lowest) {
-                System.out.println("scores " + i + " : " + scores[i]);
                 lowest = scores[i];
                 index = i;
             }
         }
-        System.out.println("index: " + index);
         return index;
     }
 
@@ -106,7 +102,6 @@ public class playerScore extends EngineService {
             if(scorename[x] != null){
                 String[] words = scorename[x].split("\\s");
                 tempSc[x] = Integer.parseInt(words[1]);                  // convert String to integer
-                System.out.println("Split, tempSc[" + x + "] : " + tempSc[x]);
             }else{
                 break;
             }
@@ -120,8 +115,6 @@ public class playerScore extends EngineService {
         }else{
             int[] splitScore = split();
             Arrays.sort(splitScore);
-            for (int x=0; x<MAX; ++x)
-                System.out.println("showScores, Sorted splitScore["+x+"]: "+splitScore[x]);
             String temp = "";
 
             int u = 1;          // loop counter for numbering
@@ -175,9 +168,7 @@ public class playerScore extends EngineService {
             int i=0;
             String temp="";
             while((temp=br.readLine())!=null){
-                System.out.println(temp);
                 scorename[i]=temp;
-                System.out.println("scorename"+scorename[i]);
                 ++i;
             }
             readScore.close();

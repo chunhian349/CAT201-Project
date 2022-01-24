@@ -84,7 +84,7 @@ public class WallBuildingComponent extends Component {
         entityBuilder()
                 .at(x, y)
                 .type(EntityType.COIN)
-                .viewWithBBox(new Circle(15, Color.YELLOW))
+                .viewWithBBox(new Circle(25, Color.YELLOW))
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
     }
