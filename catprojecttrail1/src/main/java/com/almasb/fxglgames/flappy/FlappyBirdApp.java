@@ -78,13 +78,18 @@ public class FlappyBirdApp extends GameApplication {
         initPlayer();
         getGameTimer().runAtInterval(() -> {            // count the score by 1
             inc("score", +1);
-        }, Duration.seconds(1));
+        }, Duration.millis(100));
     }
 
     @Override
     protected void initPhysics() {
         onCollisionBegin(PLAYER, MOUNTAIN, (player, mountain) -> showGameOver());
         onCollisionBegin(PLAYER, BIRD, (player, bird) -> showGameOver());
+        onCollisionBegin(PLAYER, COIN, (player, coin) -> {
+            getAudioPlayer().playSound(getAssetLoader().loadSound("coin_sound.mp3"));
+            coin.removeFromWorld();
+            inc("score", +25);
+        });
     }
 
     @Override

@@ -6,6 +6,8 @@ import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.texture.Texture;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 import java.util.Random;
 
@@ -27,10 +29,14 @@ public class WallBuildingComponent extends Component {
 
         if ((lastBird - entity.getX() < FXGL.getAppWidth()) && (lastMount - entity.getX() < FXGL.getAppWidth())){
             if(rd.nextBoolean()) {
+                coinSpawn(lastBird - 500, 600);
                 birdSpawn();
+                coinSpawn(lastBird + 1090, 600);
             }
             else{
+                coinSpawn(lastMount - 400, 250);
                 mountainSpawn();
+                coinSpawn(lastMount + 1170, 250);
             }
         }
     }
@@ -39,13 +45,14 @@ public class WallBuildingComponent extends Component {
         Texture birdTxt = texture("birds.png");
         birdTxt.setPreserveRatio(true);
         birdTxt.setFitHeight(250);
+        System.out.println("width: " + birdTxt.getFitWidth());
 
         //for (int i = 1; i <= 20; i++) {
 
         entityBuilder()
                 .at(lastBird, (int)(Math.random()*200))
                 .type(EntityType.BIRD)
-                .bbox(new HitBox(BoundingShape.box(390,250)))
+                .bbox(new HitBox(BoundingShape.box(390,240)))
                 .view(birdTxt)
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
@@ -71,6 +78,15 @@ public class WallBuildingComponent extends Component {
         lastBird += 2500;
         lastMount += 2500;
 
+    }
+
+    private void coinSpawn(double x, double y){
+        entityBuilder()
+                .at(x, y)
+                .type(EntityType.COIN)
+                .viewWithBBox(new Circle(15, Color.YELLOW))
+                .with(new CollidableComponent(true))
+                .buildAndAttach();
     }
 
 }
