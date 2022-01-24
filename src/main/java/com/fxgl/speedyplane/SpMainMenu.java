@@ -76,11 +76,12 @@ public class SpMainMenu extends FXGLMenu{
         pane.setHgap(25);
         pane.setVgap(10);
         pane.setAlignment(Pos.CENTER);
-        pane.addRow(0, getUIFactoryService().newText("How To Fly?"));
-        pane.addRow(1, getUIFactoryService().newText("Press the screen to fly"));
-        pane.addRow(3, getUIFactoryService().newText("How To Win?"));
-        pane.addRow(4, getUIFactoryService().newText("Avoid colliding the bird and big rock mountain."));
-        pane.addRow(5, getUIFactoryService().newText("Continue your flight till the end."));
+        pane.addRow(0, getUIFactoryService().newText("Control:"));
+        pane.addRow(1, getUIFactoryService().newText("Click or press left mouse button to fly"));
+        pane.addRow(3, getUIFactoryService().newText("Gameplay:"));
+        pane.addRow(4, getUIFactoryService().newText("Avoid colliding the birds and big rock mountain."));
+        pane.addRow(5, getUIFactoryService().newText("You can collect coin for extra score."));
+        pane.addRow(6, getUIFactoryService().newText("Try to get higher score as possible, have fun!"));
 
         getDialogService().showBox("HELP", pane, getUIFactoryService().newButton("OK"));
     }

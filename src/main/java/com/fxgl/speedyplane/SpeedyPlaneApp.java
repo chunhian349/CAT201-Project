@@ -113,7 +113,6 @@ public class SpeedyPlaneApp extends GameApplication {
 
             Entity bg = entityBuilder()
                     .at(0,0)
-                    .type(EntityType.CLOUD)
                     .view(background)
                     .buildAndAttach();
 
@@ -148,12 +147,6 @@ public class SpeedyPlaneApp extends GameApplication {
         getAudioPlayer().loopMusic(menuBGM);
     }
 
-    /*private void initGameBGM(){
-        getAudioPlayer().stopAllSoundsAndMusic();
-        Music menuBGM = getAssetLoader().loadMusic("bgm2.mp3");
-        getAudioPlayer().loopMusic(menuBGM);
-    }*/
-
     private void initDeathSF(){
         getAudioPlayer().stopAllSoundsAndMusic();
         Sound deathSF = getAssetLoader().loadSound("dying.mp3");
@@ -162,13 +155,12 @@ public class SpeedyPlaneApp extends GameApplication {
 
     public void showGameOver() {
         initDeathSF();
-        StringBuilder builder = new StringBuilder();
-        builder.append("Game Over!\n\n");
-        builder.append("Final score: ")
-                .append(geti("score"))
-                .append("\n\n");
-        builder.append("Would you like to restart?");
-        getDialogService().showConfirmationBox(builder.toString(), yes ->
+        String builder = "Game Over!\n\n" +
+                "Final score: " +
+                geti("score") +
+                "\n\n" +
+                "Would you like to restart?";
+        getDialogService().showConfirmationBox(builder, yes ->
         {
             if (yes) {
                 initMenuBGM();
@@ -185,11 +177,10 @@ public class SpeedyPlaneApp extends GameApplication {
 
     public void enterScore(){
         if(geti("score") > FXGL.getService(PlayerScore.class).getHighestScore()) {
-        StringBuilder highscore = new StringBuilder();
-        highscore.append("New High score: ")
-                .append(geti("score"))
-                .append("\nEnter your name");
-            getDialogService().showInputBox(highscore.toString(),
+            String highscore = "New High score: " +
+                    geti("score") +
+                    "\nEnter your name";
+            getDialogService().showInputBox(highscore,
                     s -> s.matches("[a-zA-Z]*"), name -> {
 
                         getService(PlayerScore.class).setScore(String.valueOf(geti("score")));

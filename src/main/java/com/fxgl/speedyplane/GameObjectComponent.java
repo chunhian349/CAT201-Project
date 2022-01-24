@@ -46,8 +46,6 @@ public class GameObjectComponent extends Component {
         birdTxt.setPreserveRatio(true);
         birdTxt.setFitHeight(250);
 
-        //for (int i = 1; i <= 20; i++) {
-
         entityBuilder()
                 .at(lastBird, (int)(Math.random()*200))
                 .type(EntityType.BIRD)
@@ -56,15 +54,14 @@ public class GameObjectComponent extends Component {
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
 
-        //}
         lastBird += 2500;
         lastMount += 2500;
     }
+
     private void mountainSpawn() {
         Texture wallTxt = texture("mountain.png");
         wallTxt.setPreserveRatio(true);
         wallTxt.setFitHeight(600);
-        //for (int i = 1; i <= 20; i++) {
 
         entityBuilder()
                 .at(lastMount, height - 600)
@@ -73,10 +70,9 @@ public class GameObjectComponent extends Component {
                 .view(wallTxt)
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
-        //}
+
         lastBird += 2500;
         lastMount += 2500;
-
     }
 
     private void coinSpawn(double x, double y){
@@ -87,53 +83,4 @@ public class GameObjectComponent extends Component {
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
     }
-
 }
-
-  /*
-  private void buildWalls(){
-       // buildCeiling();
-        birdMountains();
-    }
-
-  private Rectangle wallView(double width, double height) {
-        Rectangle wall = new Rectangle(width, height);
-        wall.setArcWidth(25);
-        wall.setArcHeight(25);
-        wall.fillProperty().bind(FXGL.getWorldProperties().objectProperty("stageColor"));
-        return wall;
-    }*/
-
-   /* private void buildCeiling(){
-        double gameWidth = FXGL.getAppWidth();
-        for (int i = 1; i<=20; ++i){
-            entityBuilder()
-                    .at((i-1)*gameWidth, 0)
-                    .type(EntityType.WALL)
-                    .viewWithBBox(wallView(gameWidth, 5))
-                    .with(new CollidableComponent(true))
-                    .buildAndAttach();
-        }
-    }
-*/
-
-
-
-// inside buildwall() function originally
-// upper row wall from original
-            /*entityBuilder()
-                    .at(lastWall + i * 500, 0 - 25)
-                    .type(EntityType.WALL)
-                    .viewWithBBox(texture("mountains.png"))
-                    .viewWithBBox(wallView(50, topHeight))
-                    .with(new CollidableComponent(true))
-                    .buildAndAttach();*/
-//double wallHeight = height - distance - topHeight;
-/*
-double topHeight = Math.random() * (height - distance);
-            entityBuilder()
-                    .at(lastWall + i * 500, 0 + topHeight + distance + 25)
-                    .type(EntityType.WALL)
-                    .viewWithBBox(wallView(50, wallHeight))
-                    .with(new CollidableComponent(true))
-                    .buildAndAttach();*/
