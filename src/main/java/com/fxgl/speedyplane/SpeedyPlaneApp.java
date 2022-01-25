@@ -32,9 +32,9 @@ public class SpeedyPlaneApp extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings settings) {
-        settings.setWidth(1980);
+        settings.setWidth(1920);
         settings.setHeight(1080);
-        settings.setTitle("Flappy Bird Clone");
+        settings.setTitle("Speedy Plane");
         settings.setVersion("1.0");
         settings.setAppIcon("plane.png");
         settings.setMainMenuEnabled(true);
@@ -49,17 +49,13 @@ public class SpeedyPlaneApp extends GameApplication {
 
     @Override
     protected void initInput() {
-
-        UserAction jump = new UserAction("Jump") {
+        //Click or hold left mouse click to fly
+        getInput().addAction(new UserAction("Fly") {
             @Override
             protected void onAction() {
-                playerComponent.jump();
+                playerComponent.fly();
             }       // onActionBegin() to onAction() to hold to go up
-        };
-
-        //Click or hold left mouse click to fly
-        getInput().addAction(jump, MouseButton.PRIMARY);
-
+        }, MouseButton.PRIMARY);
     }
 
     @Override
