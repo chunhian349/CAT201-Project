@@ -19,7 +19,7 @@ public class PlayerScore extends EngineService {
     private final int MAX = 10;                         //Create constant int 10
     private String[] scorename = new String[MAX];       //Set array of length 10
 
-    private String score=null, name=null;               //Initialise score and name var
+    private String score = null, name = null;               //Initialise score and name var
 
     public void setScore(String sc){
         score = sc;
@@ -37,9 +37,9 @@ public class PlayerScore extends EngineService {
     public void setScorename(String sn){
 
         //Insert name and score in every row if the data file is empty
-        if(scorename[MAX-1] == null || scorename[MAX-1] == ""){
+        if(scorename[MAX-1] == null || scorename[MAX - 1].equals("")){
             for(int i=0; i<MAX; ++i){
-                if(scorename[i] == null || scorename[i] == "")
+                if(scorename[i] == null || scorename[i].equals(""))
                     scorename[i] = sn;
                 else
                     break;
@@ -63,7 +63,7 @@ public class PlayerScore extends EngineService {
 
     //Returns the highest score
     public int getHighestScore(){
-        int highestscore=0;
+        int highestscore = 0;
         int[] sc = split();
         highestscore = findHighest(sc);
         return highestscore;
@@ -118,7 +118,7 @@ public class PlayerScore extends EngineService {
 
     //Shows the Leaderboard from highest score to lowest score
     public void showScores(){
-        if (scorename[0]==null || scorename[0]==""){                            //Runs if scorename is null
+        if (scorename[0]==null || scorename[0].equals("")){                            //Runs if scorename is null
             getDialogService().showMessageBox("There is no records");
         }else{
             int[] splitScore = split();
@@ -140,9 +140,9 @@ public class PlayerScore extends EngineService {
                 for(int x=0; x<MAX; ++x){
                     if(scorename[x].endsWith(" "+temp)){
                         String[] tempScoreName = scorename[x].split("\\s");
-                        pane.addRow(0+u,getUIFactoryService().newText(u+")"));
-                        pane.addRow(0+u,getUIFactoryService().newText(tempScoreName[1]));
-                        pane.addRow(0+u, getUIFactoryService().newText(""+tempScoreName[0]));
+                        pane.addRow(u,getUIFactoryService().newText(u+")"));
+                        pane.addRow(u,getUIFactoryService().newText(tempScoreName[1]));
+                        pane.addRow(u, getUIFactoryService().newText(""+tempScoreName[0]));
                         break;
                     }
                 }
@@ -171,10 +171,10 @@ public class PlayerScore extends EngineService {
             FileReader readScore = new FileReader("scoreFile.txt");
             BufferedReader br = new BufferedReader(readScore);
 
-            int i=0;
-            String temp="";
+            int i = 0;
+            String temp= "";
             while((temp=br.readLine())!=null){
-                scorename[i]=temp;
+                scorename[i] = temp;
                 ++i;
             }
             readScore.close();

@@ -38,7 +38,7 @@ public class SpeedyPlaneApp extends GameApplication {
     @Override
     protected void initSettings(GameSettings settings) {
         settings.setAppIcon("plane.png");
-        settings.setWidth(1980);                         //Width of the app
+        settings.setWidth(1920);                         //Width of the app
         settings.setHeight(1080);                        //Height of the app
         settings.setTitle("Speedy PLane");               //Name of the app
         settings.setVersion("1.0");                      //Version of the app
@@ -249,4 +249,3 @@ public class SpeedyPlaneApp extends GameApplication {
         launch(args);
     }
 }
-
