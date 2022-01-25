@@ -31,7 +31,7 @@ public class PlayerComponent extends Component {
         }
     }
 
-    public void jump() {
+    public void fly() {
         acceleration.addLocal(0, -5);
     }
 }

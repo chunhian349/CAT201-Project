@@ -49,7 +49,7 @@ public class GameObjectComponent extends Component {
         entityBuilder()
                 .at(lastBird, (int)(Math.random()*200))
                 .type(EntityType.BIRD)
-                .bbox(new HitBox(BoundingShape.box(390,240)))
+                .bbox(new HitBox(BoundingShape.box(390,230)))
                 .view(birdTxt)
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
@@ -66,7 +66,7 @@ public class GameObjectComponent extends Component {
         entityBuilder()
                 .at(lastMount, height - 600)
                 .type(EntityType.MOUNTAIN)
-                .bbox(new HitBox(BoundingShape.box(670,570)))
+                .bbox(new HitBox(BoundingShape.box(670,600)))
                 .view(wallTxt)
                 .with(new CollidableComponent(true))
                 .buildAndAttach();
