@@ -16,32 +16,35 @@ import static com.almasb.fxgl.dsl.FXGLForKtKt.getUIFactoryService;
 
 public class PlayerScore extends EngineService {
 
-    private final int MAX = 10;
-    private String[] scorename = new String[MAX];
+    private final int MAX = 10;                         //Create constant int 10
+    private String[] scorename = new String[MAX];       //Set array of length 10
 
-    // to get the score and name from user at mainMenuTest
-    private String score = null, name = null;
+    private String score=null, name=null;               //Initialise score and name var
 
     public void setScore(String sc){
         score = sc;
-    }
+    }           //setter function for score
     public void setName(String name) {
         this.name = name;
-    }
-    public String getScore(){return score;}
-    public String getName(){return name;}
+    }    //setter function for name
+    public String getScore(){return score;}                   //getter function for score
+    public String getName(){return name;}                     //getter function for name
 
-    public PlayerScore() {
+    public PlayerScore() {           //Constructor
         readScore();
     }
 
     public void setScorename(String sn){
-        if(scorename[MAX-1] == null || scorename[MAX - 1].equals("")){
+
+        //Insert name and score in every row if the data file is empty
+        if(scorename[MAX-1] == null || scorename[MAX-1] == ""){
             for(int i=0; i<MAX; ++i){
-                if(scorename[i] == null || scorename[i].equals(""))
+                if(scorename[i] == null || scorename[i] == "")
                     scorename[i] = sn;
-                break;
+                else
+                    break;
             }
+
         }else{                                              // if array is full
             int[] splitScore = split();                     // find the lowest value and return the index
             int index = findLowestIndex(splitScore);
@@ -58,52 +61,50 @@ public class PlayerScore extends EngineService {
         return scorename[index];
     }
 
+    //Returns the highest score
     public int getHighestScore(){
-        int highestscore = 0;
+        int highestscore=0;
         int[] sc = split();
         highestscore = findHighest(sc);
         return highestscore;
     }
 
-    private int findLowest(int[] scores){
+    //Returns the lowest integer from the array
+    private int findLowest(int scores[]){
         int lowest = scores[0];
-
         for(int i=1; i<MAX; ++i){
             if(scores[i] < lowest)
                 lowest = scores[i];
         }
-
         return lowest;
     }
 
-    private int findHighest(int[] scores){
+    //Returns the highest integer from the array
+    private int findHighest(int scores[]){
         int highest = scores[0];
-
         for(int i=1; i<MAX; ++i){
             if(scores[i] > highest)
                 highest = scores[i];
         }
-
         return highest;
     }
 
-    private int findLowestIndex(int[] scores){
+    //Returns the index position of the lowest value in the array
+    private int findLowestIndex(int scores[]){
         int lowest = scores[0];
         int index = 0;
-
         for(int i=1; i<MAX; ++i){
             if(scores[i] < lowest) {
                 lowest = scores[i];
                 index = i;
             }
         }
-
         return index;
     }
 
+    //Returns the address of the array containing the name and score
     private int[] split(){
         int[] tempSc = new int[MAX];
-
         for (int x=0; x<MAX; ++x){
             if(scorename[x] != null){
                 String[] words = scorename[x].split("\\s");
@@ -112,12 +113,12 @@ public class PlayerScore extends EngineService {
                 break;
             }
         }
-
         return tempSc;
     }
 
+    //Shows the Leaderboard from highest score to lowest score
     public void showScores(){
-        if (scorename[0]==null || scorename[0].equals("")){
+        if (scorename[0]==null || scorename[0]==""){                            //Runs if scorename is null
             getDialogService().showMessageBox("There is no records");
         }else{
             int[] splitScore = split();
@@ -134,15 +135,14 @@ public class PlayerScore extends EngineService {
             pane.addRow(0, getUIFactoryService().newText("Rankings"));
             pane.addRow(0, getUIFactoryService().newText("Score"));
             pane.addRow(0, getUIFactoryService().newText("Player Name"));
-
             for(int i=MAX-1; i>=0; --i){
                 temp = String.valueOf(splitScore[i]);           // convert highest score into string
                 for(int x=0; x<MAX; ++x){
                     if(scorename[x].endsWith(" "+temp)){
                         String[] tempScoreName = scorename[x].split("\\s");
-                        pane.addRow(u, getUIFactoryService().newText(u+")"));
-                        pane.addRow(u, getUIFactoryService().newText(tempScoreName[1]));
-                        pane.addRow(u, getUIFactoryService().newText(""+tempScoreName[0]));
+                        pane.addRow(0+u,getUIFactoryService().newText(u+")"));
+                        pane.addRow(0+u,getUIFactoryService().newText(tempScoreName[1]));
+                        pane.addRow(0+u, getUIFactoryService().newText(""+tempScoreName[0]));
                         break;
                     }
                 }
@@ -152,10 +152,7 @@ public class PlayerScore extends EngineService {
         }
     }
 
-    /**
-     create file and store the score in it
-    **/
-
+    //Creates a file and store the highscore data in the file
     public void storeScore(){
         try {
             FileWriter scoreFile = new FileWriter("scoreFile.txt");
@@ -168,15 +165,16 @@ public class PlayerScore extends EngineService {
         }
     }
 
+    //Reads the data from file and store the data in scorename[]
     public void readScore(){
         try{
             FileReader readScore = new FileReader("scoreFile.txt");
             BufferedReader br = new BufferedReader(readScore);
 
-            int i = 0;
-            String temp = "";
+            int i=0;
+            String temp="";
             while((temp=br.readLine())!=null){
-                scorename[i] = temp;
+                scorename[i]=temp;
                 ++i;
             }
             readScore.close();
